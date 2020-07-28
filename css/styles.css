@@ -1,0 +1,111 @@
+@charset "UTF-8";
+/* Générales */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+img {
+  width: 140px;
+}
+
+a {
+  font-size: 10px;
+  color: #7f7361;
+}
+
+h1 {
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+h2 {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 1em;
+  width: 100%;
+  color: #7c9d74;
+}
+
+h3 {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 0.8em;
+  width: 100%;
+  color: #333448;
+}
+
+/* Header */
+header {
+  background: #fbfbfb;
+  height: 80px;
+}
+header nav li {
+  font-size: 12px;
+  color: #7f7361;
+}
+
+/* Main */
+main {
+  overflow: hidden;
+  /* Button / Version Interactive */
+}
+main div.container:first-child {
+  background: white;
+}
+main div.container:first-child div div {
+  height: 60vh;
+  background: #fbfbfb;
+}
+main div.container:last-child {
+  min-height: 1000vh;
+  position: relative;
+}
+main div.container:last-child div#slides div {
+  position: fixed;
+  top: 0;
+  display: none;
+  width: 100vw;
+  height: 20vh;
+  background: #fbfbfb;
+}
+main div.container:last-child button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+main .parent-video {
+  z-index: -200;
+  min-height: 100vh;
+  width: 100%;
+  top: 0;
+}
+main .parent-video .video_maison-dimensions {
+  width: 100%;
+  height: 100vh;
+  background: none;
+}
+main .parent-video .video_maison-dimensions video {
+  width: 320px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 160px);
+}
+main button {
+  height: 10vh;
+  background: #fbfbfb;
+}
+
+footer {
+  min-height: 10vh;
+  background: #fbfbfb;
+}
+
+/*# sourceMappingURL=styles.css.map */
