@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
 }
 
-img {
+#logo {
   width: 140px;
 }
 
@@ -42,14 +42,18 @@ h3 {
   color: #333448;
 }
 
+p#swipe {
+  color: #333448;
+  font-size: 11px;
+  z-index: 200;
+  position: fixed;
+  display: none;
+}
+
 /* Header */
 header {
   background: #fbfbfb;
-  height: 80px;
-}
-header nav li {
-  font-size: 12px;
-  color: #7f7361;
+  min-height: 80px;
 }
 
 /* Main */
@@ -57,32 +61,34 @@ main {
   overflow: hidden;
   /* Button / Version Interactive */
 }
-main div.container:first-child {
+main div.container#premier {
   background: white;
 }
-main div.container:first-child div div {
+main div.container#premier div div {
   height: 60vh;
   background: #fbfbfb;
 }
-main div.container:last-child {
+main div.container#deuxieme {
+  margin-bottom: 40px;
   min-height: 1000vh;
   position: relative;
 }
-main div.container:last-child div#slides div {
-  position: fixed;
-  top: 0;
-  display: none;
-  width: 100vw;
+main div.container#deuxieme div#slides div {
+  z-index: 350;
+  width: 80%;
   height: 20vh;
+  position: fixed;
+  top: 5%;
+  left: 10%;
+  opacity: 0;
+  transition: opacity 1s;
+  display: flex;
   background: #fbfbfb;
-}
-main div.container:last-child button {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
 }
 main .parent-video {
   z-index: -200;
+  opacity: 0;
+  transition: opacity 0.5s;
   min-height: 100vh;
   width: 100%;
   top: 0;
@@ -93,19 +99,73 @@ main .parent-video .video_maison-dimensions {
   background: none;
 }
 main .parent-video .video_maison-dimensions video {
-  width: 320px;
+  width: 80%;
   position: absolute;
   top: 0;
-  left: calc(50% - 160px);
+  left: 10%;
 }
-main button {
-  height: 10vh;
+main #troisieme {
+  min-height: 200vh;
+  z-index: 400;
+  background: white;
+}
+main #troisieme #finally {
+  margin-bottom: 60px;
+}
+main #troisieme #finally div {
+  min-height: 70vh;
   background: #fbfbfb;
+}
+main #troisieme #infos button {
+  height: 10vh;
+  color: #333448;
+  border-color: #333448;
+}
+main #troisieme #infos button:hover {
+  background: white;
+  color: #7f7361;
+  border-color: #7f7361;
+}
+main #troisieme #infos #text {
+  margin: 100px 0 30px;
+}
+main #troisieme #infos #form form > * {
+  margin: 5px 0;
 }
 
 footer {
-  min-height: 10vh;
+  min-height: 20vh;
   background: #fbfbfb;
+}
+
+@media (min-width: 62em) {
+  h1 {
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 2.2em;
+  }
+
+  h3 {
+    font-size: 2em;
+  }
+
+  a {
+    font-size: 12px;
+  }
+
+  #logo {
+    width: 200px;
+  }
+
+  .container {
+    padding: 0 30px;
+  }
+
+  #text {
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

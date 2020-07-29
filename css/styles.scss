@@ -16,7 +16,7 @@ body {
     overflow-x: hidden;
 }
 
-img {
+#logo {
     width: 140px;
 }
 
@@ -48,17 +48,19 @@ h3 {
     color: $blue;
 }
 
+p#swipe {
+    color: $blue;
+    font-size: 11px;
+    z-index: 200;
+    position: fixed;
+    display: none;
+}
+
 /* Header */
 
 header {
     background: $grey;
-    height: 80px;
-    nav {
-        li {
-            font-size: 12px;
-            color: $brown;
-        }
-    }
+    min-height: 80px;
 }
 
 /* Main */
@@ -66,7 +68,7 @@ header {
 main {
     overflow: hidden;
     div.container {
-        &:first-child {
+        &#premier {
             background: white;
             div {
                 div {
@@ -75,28 +77,30 @@ main {
                 }
             }
         }
-        &:last-child {
+        &#deuxieme {
+            margin-bottom: 40px;
             min-height: 1000vh;
             position: relative;
             div#slides {
                 div {
-                    position: fixed;
-                    top: 0;
-                    display: none;
-                    width: 100vw;
+                    z-index: 350;
+                    width: 80%;
                     height: 20vh;
+                    position: fixed;
+                    top: 5%;
+                    left: 10%;
+                    opacity: 0;
+                    transition: opacity 1s;
+                    display: flex;
                     background: $grey;
                 }
-            }
-            button {
-                position: absolute;
-                bottom: 20px;
-                left: 20px;
             }
         }
     }
     .parent-video {
         z-index: -200;
+        opacity: 0;
+        transition: opacity 0.5s;
         min-height: 100vh;
         width: 100%;
         top: 0;
@@ -106,22 +110,81 @@ main {
             background: none;
 
             video {
-                width: 320px;
+                width: 80%;
                 position: absolute;
                 top: 0;
-                left: calc(50% - 160px);
+                left: 10%;
             }
         }
     }
     /* Button / Version Interactive */
 
-    button {
-        height: 10vh;
-        background: $grey;
+    #troisieme {
+        min-height: 200vh;
+        z-index: 400;
+        background: white;
+        #finally {
+            margin-bottom: 60px;
+            div {
+                min-height: 70vh;
+                background: $grey;
+            }
+        }
+        #infos {
+            button {
+                height: 10vh;
+                color: $blue;
+                border-color: $blue;
+                &:hover {
+                    background: white;
+                    color: $brown;
+                    border-color: $brown;
+                }
+            }
+            #text {
+                margin: 100px 0 30px;
+            }
+            #form {
+                form {
+                    > * {
+                        margin: 5px 0;
+                    }
+                }
+            }
+        }
     }
 }
 
 footer {
-    min-height: 10vh;
+    min-height: 20vh;
     background: $grey;
+}
+
+@media (min-width: 62em) {
+
+    h1 {
+        font-size: 4em;
+    }
+    h2 {
+        font-size: 2.2em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+
+    a{
+        font-size: 12px;
+    }
+
+    #logo {
+        width: 200px;
+    }
+    .container {
+        padding: 0 30px;
+
+    }
+    #text {
+        text-align: center;
+    }
+    
 }
