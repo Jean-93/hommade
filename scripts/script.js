@@ -2,11 +2,11 @@ $.noConflict();
 
 jQuery(document).ready(($) => {
 
-    const partsContainer = $("#deuxieme").height() / 5;
+    const partsContainer = $("#deuxieme").height() / ($('#slides div').length + 1);
 
     /* ------------- Initialisation AOS ------------- */
     AOS.init({
-        duration: 2800,
+        duration: 1000,
     })
 
     /* Règles CSS dynamiques */
@@ -56,7 +56,7 @@ jQuery(document).ready(($) => {
         if (window.scrollY > $("#premier").outerHeight() && window.scrollY < $("main").outerHeight() - $('#troisieme').outerHeight() - $('footer').outerHeight() - 400) {
             $('.parent-video').css({ 'opacity': '1' });
 
-        } 
+        }
         else {
             $('.parent-video').css({ 'opacity': '0' });
 

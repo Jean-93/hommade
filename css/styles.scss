@@ -3,7 +3,8 @@
 $blue: #333448;
 $green: #7c9d74;
 $brown: #7f7361;
-$grey: #fbfbfb;
+$brownLighter: hsla(36, 13%, 44%, 0.089);
+$grey: #f0f0f08f;
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;600&display=swap");
 
@@ -23,6 +24,10 @@ body {
 a {
     font-size: 10px;
     color: $brown;
+    &:hover {
+        color: $blue;
+        text-decoration: none;
+    }
 }
 
 h1 {
@@ -67,7 +72,7 @@ header {
 
 main {
     overflow: hidden;
-    div.container {
+    .container {
         &#premier {
             background: white;
             div {
@@ -81,7 +86,7 @@ main {
             margin-bottom: 40px;
             min-height: 1000vh;
             position: relative;
-            div#slides {
+            #slides {
                 div {
                     z-index: 350;
                     width: 80%;
@@ -129,9 +134,8 @@ main {
                 min-height: 70vh;
                 background: $grey;
             }
-        }
-        #infos {
             button {
+                margin: 30px auto 0;
                 height: 10vh;
                 color: $blue;
                 border-color: $blue;
@@ -141,14 +145,32 @@ main {
                     border-color: $brown;
                 }
             }
+        }
+        #infos {
+            background: $grey;
+            padding: 20px;
+            
             #text {
-                margin: 100px 0 30px;
+                margin: 30px 0 30px;
             }
             #form {
+                button {
+                    margin: 30px auto 0;
+                    height: 10vh;
+                    color: $blue;
+                    border-color: $blue;
+                    &:hover {
+                        background: white;
+                        color: $brown;
+                        border-color: $brown;
+                    }
+                }
                 form {
                     > * {
+                        border-radius: 5px;
                         margin: 5px 0;
                     }
+                    
                 }
             }
         }
@@ -161,7 +183,6 @@ footer {
 }
 
 @media (min-width: 62em) {
-
     h1 {
         font-size: 4em;
     }
@@ -172,19 +193,38 @@ footer {
         font-size: 2em;
     }
 
-    a{
+    a {
         font-size: 12px;
+    }
+
+    p#swipe {
+        font-size: 15px;
     }
 
     #logo {
         width: 200px;
     }
-    .container {
-        padding: 0 30px;
+    main {
+        .container {
+            padding: 0 30px;
+            &#premier {
+                div {
+                    div{
+                        padding-left: 15px !important;
+                        padding-right: 15px !important;
+                    }
 
-    }
-    #text {
-        text-align: center;
+                }
+                
+            }
+        }
+        #text {
+            text-align: center;
+        }
     }
     
+    
+
+    
+
 }

@@ -18,6 +18,10 @@ a {
   font-size: 10px;
   color: #7f7361;
 }
+a:hover {
+  color: #333448;
+  text-decoration: none;
+}
 
 h1 {
   font-family: "Raleway";
@@ -52,7 +56,7 @@ p#swipe {
 
 /* Header */
 header {
-  background: #fbfbfb;
+  background: #f0f0f08f;
   min-height: 80px;
 }
 
@@ -61,19 +65,19 @@ main {
   overflow: hidden;
   /* Button / Version Interactive */
 }
-main div.container#premier {
+main .container#premier {
   background: white;
 }
-main div.container#premier div div {
+main .container#premier div div {
   height: 60vh;
-  background: #fbfbfb;
+  background: #f0f0f08f;
 }
-main div.container#deuxieme {
+main .container#deuxieme {
   margin-bottom: 40px;
   min-height: 1000vh;
   position: relative;
 }
-main div.container#deuxieme div#slides div {
+main .container#deuxieme #slides div {
   z-index: 350;
   width: 80%;
   height: 20vh;
@@ -83,7 +87,7 @@ main div.container#deuxieme div#slides div {
   opacity: 0;
   transition: opacity 1s;
   display: flex;
-  background: #fbfbfb;
+  background: #f0f0f08f;
 }
 main .parent-video {
   z-index: -200;
@@ -114,28 +118,45 @@ main #troisieme #finally {
 }
 main #troisieme #finally div {
   min-height: 70vh;
-  background: #fbfbfb;
+  background: #f0f0f08f;
 }
-main #troisieme #infos button {
+main #troisieme #finally button {
+  margin: 30px auto 0;
   height: 10vh;
   color: #333448;
   border-color: #333448;
 }
-main #troisieme #infos button:hover {
+main #troisieme #finally button:hover {
   background: white;
   color: #7f7361;
   border-color: #7f7361;
 }
+main #troisieme #infos {
+  background: #f0f0f08f;
+  padding: 20px;
+}
 main #troisieme #infos #text {
-  margin: 100px 0 30px;
+  margin: 30px 0 30px;
+}
+main #troisieme #infos #form button {
+  margin: 30px auto 0;
+  height: 10vh;
+  color: #333448;
+  border-color: #333448;
+}
+main #troisieme #infos #form button:hover {
+  background: white;
+  color: #7f7361;
+  border-color: #7f7361;
 }
 main #troisieme #infos #form form > * {
+  border-radius: 5px;
   margin: 5px 0;
 }
 
 footer {
   min-height: 20vh;
-  background: #fbfbfb;
+  background: #f0f0f08f;
 }
 
 @media (min-width: 62em) {
@@ -155,15 +176,22 @@ footer {
     font-size: 12px;
   }
 
+  p#swipe {
+    font-size: 15px;
+  }
+
   #logo {
     width: 200px;
   }
 
-  .container {
+  main .container {
     padding: 0 30px;
   }
-
-  #text {
+  main .container#premier div div {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  main #text {
     text-align: center;
   }
 }
